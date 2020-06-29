@@ -30,6 +30,50 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
+      backgroundColor: Colors.white,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(bottom: 30),
+            child: Icon(
+              Icons.account_circle,
+              color: Colors.green,
+              size: 120,
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: TextField(
+              decoration: InputDecoration(
+                  labelText: "Peso (kg)",
+                  labelStyle: TextStyle(
+                    color: Colors.green,
+                    fontSize: 18,
+                  )),
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 25,
+              ),
+            ),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: TextField(
+              decoration: InputDecoration(
+                  labelText: "Altura (cm)",
+                  labelStyle: TextStyle(
+                    color: Colors.green,
+                    fontSize: 18,
+                  )),
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 25,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
