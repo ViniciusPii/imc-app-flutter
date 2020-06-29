@@ -31,20 +31,21 @@ class _HomeState extends State<Home> {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Padding(
-            padding: EdgeInsets.only(bottom: 30),
-            child: Icon(
-              Icons.account_circle,
-              color: Colors.green,
-              size: 120,
+      body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(top: 40),
+              child: Icon(
+                Icons.account_circle,
+                color: Colors.green,
+                size: 100,
+              ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
-            child: TextField(
+            TextField(
               decoration: InputDecoration(
                   labelText: "Peso (kg)",
                   labelStyle: TextStyle(
@@ -56,23 +57,40 @@ class _HomeState extends State<Home> {
                 fontSize: 25,
               ),
             ),
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 40),
-            child: TextField(
-              decoration: InputDecoration(
-                  labelText: "Altura (cm)",
-                  labelStyle: TextStyle(
-                    color: Colors.green,
-                    fontSize: 18,
-                  )),
-              style: TextStyle(
-                color: Colors.green,
-                fontSize: 25,
+            Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: TextField(
+                decoration: InputDecoration(
+                    labelText: "Altura (cm)",
+                    labelStyle: TextStyle(
+                      color: Colors.green,
+                      fontSize: 18,
+                    )),
+                style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 25,
+                ),
               ),
             ),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.only(top: 30),
+              child: Container(
+                height: 50,
+                child: RaisedButton(
+                  onPressed: () {},
+                  color: Colors.green,
+                  child: Text(
+                    "Calcular",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
